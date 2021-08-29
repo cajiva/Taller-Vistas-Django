@@ -5,5 +5,5 @@ def get_all_measurements():
     return measurements
 
 def get_measurement_id(id):
-    measure = Measurement.objects.get(id)
+    measure = filter(id,Measurement.objects)
     return measure
