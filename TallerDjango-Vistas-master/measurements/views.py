@@ -10,8 +10,8 @@ def get_measurements(request):
     return HttpResponse(measurements_list, content_type = 'application/json')
 
 
-def get_measure(request):
-    measurement = get_measurement_id(request)
+def get_measure(request, id):
+    measurement = get_measurement_id(id)
     measurements_id = ('json',measurement)
     return HttpResponse(measurements_id, content_type = 'application/json')
 
